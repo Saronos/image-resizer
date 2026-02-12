@@ -22,7 +22,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["celery"]
-          args: ["-A", "app.celery_app:celery_app", "worker", "--loglevel=info", "--concurrency={{ .Values.worker.concurrency }}"]
+          args: ["-A", "app.tasks:celery_app", "worker", "--loglevel=info", "--concurrency={{ .Values.worker.concurrency }}"]
           envFrom:
             - configMapRef:
                 name: {{ include "image-resizer.fullname" . }}-config
