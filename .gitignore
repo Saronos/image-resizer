@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.db
+.idea/
+.vscode/
+*.swp
+*.swo
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.DS_Store
+Thumbs.db
+uploads/
+results/
+
+# Secrets sin encriptar (NUNCA commitear)
+k8s/secret.yaml
